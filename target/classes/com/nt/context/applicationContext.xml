@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+ 
+    <bean id="st" class="com.nt.SpringProject.Student">
+    <property name="name" value="srinath"></property>
+    
+    </bean>
+    <bean id="col" class="com.nt.SpringProject.College">
+    
+    <property name="name" value="srinath"></property>
+    <property name="city" value="Tadepalligudem"></property>
+    <property name="zipcode" value="534001"></property>
+    <property name="percentile" value="99.08"></property>
+    </bean>
+    
+    <bean id="addre" class="com.nt.SpringProject.Address">
+    <constructor-arg value="Malvern"></constructor-arg>
+    <constructor-arg value="Pensylvania"></constructor-arg>
+    <constructor-arg value="USA"></constructor-arg>
+    </bean>
+    
+    <bean id="Emp" class="com.nt.SpringProject.Employee">
+    <constructor-arg value="1234" type="int"></constructor-arg>
+    <constructor-arg value="Srinath"></constructor-arg>
+    <constructor-arg>
+    <ref bean="addre"/>
+    </constructor-arg>
+    
+    </bean>
+    <bean id="ques" class="com.cons.map.Question">
+    <constructor-arg value="5674" type="int"></constructor-arg>
+    <constructor-arg value="srinivas"></constructor-arg>
+    
+    <constructor-arg>
+    <map>
+    <entry key="1" value="utah"></entry>
+    <entry key="2" value="pensylvania"></entry>
+    </map>
+    </constructor-arg>
+    </bean>
+    
+    <bean id="quesLi" class="com.ci.li.QuestionLis">
+    <constructor-arg value="232455" type="int"></constructor-arg>
+    <constructor-arg value="srinath"></constructor-arg>
+    <constructor-arg>
+    <list>
+    <value>Java is a Programming Language</value>
+    <value>Java is a platform Independent</value>
+    <value>Ameerpet is best for resource for any language</value>
+    </list>
+    </constructor-arg>
+    </bean>
+    
+    <bean id="ans2" class="com.ci.li.Answer2">
+    <constructor-arg value="1198" type="int"></constructor-arg>
+    <constructor-arg value="sahithi"></constructor-arg>
+    <constructor-arg value="aravind"> </constructor-arg>
+    </bean>
+	
+	<bean id="quesl2" class="com.ci.li.QuestionLis2">
+	<constructor-arg value="4567" type="int"></constructor-arg>
+	<constructor-arg value="optconnect"></constructor-arg>
+	<constructor-arg>
+	<list>
+	<ref bean="ans2"/>
+	</list>
+	</constructor-arg>
+	</bean>
+
+	<bean id="ans11" class="com.cons.map.Answer2">
+    <constructor-arg value="1198" type="int"></constructor-arg>
+    <constructor-arg value="sahithi"></constructor-arg>
+    <constructor-arg value="aravind"> </constructor-arg>
+    </bean>
+    
+    <bean id="ans22" class="com.cons.map.Answer2">
+    <constructor-arg value="1198" type="int"></constructor-arg>
+    <constructor-arg value="sahithi"></constructor-arg>
+    <constructor-arg value="aravind"> </constructor-arg>
+    </bean>
+    
+    <bean id="us1" class="com.cons.map.User">
+    <constructor-arg value="23245" type="int"></constructor-arg>
+    <constructor-arg value="srinath"></constructor-arg>
+    <constructor-arg value="sivasrinath19@gmail.com"></constructor-arg>
+    </bean>
+
+	<bean id="us2" class="com.cons.map.User">
+    <constructor-arg value="25" type="int"></constructor-arg>
+    <constructor-arg value="sahithi"></constructor-arg>
+    <constructor-arg value="sahithisirisetti@gmail.com"></constructor-arg>
+    </bean>
+    
+    <bean id="ques2" class="com.cons.map.Question2">
+    <constructor-arg value="789" type="int"></constructor-arg>
+    <constructor-arg value="ammerkhan"></constructor-arg>
+    <constructor-arg>
+    <map>
+    <entry key-ref="ans11" value-ref="us1"></entry>
+    <entry key-ref="ans22" value-ref="us2"></entry>
+    </map>
+    
+    </constructor-arg>
+    </bean>
+	    
+	    
+</beans>
